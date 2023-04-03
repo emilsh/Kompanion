@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		4919647329DAD65800AB4822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647229DAD65800AB4822 /* AppDelegate.swift */; };
 		4919647529DAD65800AB4822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647429DAD65800AB4822 /* SceneDelegate.swift */; };
-		4919647729DAD65800AB4822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647629DAD65800AB4822 /* ViewController.swift */; };
+		4919647729DAD65800AB4822 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647629DAD65800AB4822 /* MainScreenVC.swift */; };
 		4919647A29DAD65800AB4822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4919647829DAD65800AB4822 /* Main.storyboard */; };
 		4919647C29DAD65900AB4822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4919647B29DAD65900AB4822 /* Assets.xcassets */; };
 		4919647F29DAD65900AB4822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4919647D29DAD65900AB4822 /* LaunchScreen.storyboard */; };
+		4919648829DAD8F200AB4822 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919648729DAD8F200AB4822 /* API.swift */; };
+		4919648A29DADC5F00AB4822 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919648929DADC5F00AB4822 /* NetworkManager.swift */; };
+		4919648F29DAF69C00AB4822 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919648E29DAF69C00AB4822 /* MainScreenViewModel.swift */; };
+		4919649429DB063B00AB4822 /* StarshipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649329DB063B00AB4822 /* StarshipCell.swift */; };
+		4919649829DB0B6200AB4822 /* DetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649729DB0B6200AB4822 /* DetailScreenViewModel.swift */; };
+		4919649A29DB0CDB00AB4822 /* DetailScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649929DB0CDB00AB4822 /* DetailScreenVC.swift */; };
+		4919649C29DB2A2800AB4822 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649B29DB2A2800AB4822 /* Starship.swift */; };
 		D4BB9DF4C62219F02B1574CD /* Pods_Kompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDCA4A0E5434110AF80A1C7 /* Pods_Kompanion.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +28,18 @@
 		4919646F29DAD65800AB4822 /* Kompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4919647229DAD65800AB4822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4919647429DAD65800AB4822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4919647629DAD65800AB4822 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4919647629DAD65800AB4822 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		4919647929DAD65800AB4822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4919647B29DAD65900AB4822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4919647E29DAD65900AB4822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4919648029DAD65900AB4822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4919648729DAD8F200AB4822 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4919648929DADC5F00AB4822 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4919648E29DAF69C00AB4822 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		4919649329DB063B00AB4822 /* StarshipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipCell.swift; sourceTree = "<group>"; };
+		4919649729DB0B6200AB4822 /* DetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenViewModel.swift; sourceTree = "<group>"; };
+		4919649929DB0CDB00AB4822 /* DetailScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVC.swift; sourceTree = "<group>"; };
+		4919649B29DB2A2800AB4822 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 		8B4C933411A49C09E2DF6384 /* Pods-Kompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kompanion.debug.xcconfig"; path = "Target Support Files/Pods-Kompanion/Pods-Kompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		EFDCA4A0E5434110AF80A1C7 /* Pods_Kompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,15 +77,86 @@
 		4919647129DAD65800AB4822 /* Kompanion */ = {
 			isa = PBXGroup;
 			children = (
-				4919647229DAD65800AB4822 /* AppDelegate.swift */,
-				4919647429DAD65800AB4822 /* SceneDelegate.swift */,
-				4919647629DAD65800AB4822 /* ViewController.swift */,
-				4919647829DAD65800AB4822 /* Main.storyboard */,
-				4919647B29DAD65900AB4822 /* Assets.xcassets */,
-				4919647D29DAD65900AB4822 /* LaunchScreen.storyboard */,
-				4919648029DAD65900AB4822 /* Info.plist */,
+				4919649D29DB3C2F00AB4822 /* Views */,
+				4919649F29DB3C5700AB4822 /* Resources */,
+				4919648B29DADE6300AB4822 /* Models */,
+				4919648629DAD8E700AB4822 /* Services */,
+				4919649029DB036500AB4822 /* Controllers */,
+				4919649E29DB3C4000AB4822 /* Storyboards */,
 			);
 			path = Kompanion;
+			sourceTree = "<group>";
+		};
+		4919648629DAD8E700AB4822 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4919648729DAD8F200AB4822 /* API.swift */,
+				4919648929DADC5F00AB4822 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4919648B29DADE6300AB4822 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4919649B29DB2A2800AB4822 /* Starship.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4919649029DB036500AB4822 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4919649129DB037000AB4822 /* MainScreen */,
+				4919649229DB037700AB4822 /* DetailScreen */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4919649129DB037000AB4822 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4919647629DAD65800AB4822 /* MainScreenVC.swift */,
+				4919648E29DAF69C00AB4822 /* MainScreenViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		4919649229DB037700AB4822 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4919649729DB0B6200AB4822 /* DetailScreenViewModel.swift */,
+				4919649929DB0CDB00AB4822 /* DetailScreenVC.swift */,
+			);
+			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		4919649D29DB3C2F00AB4822 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4919649329DB063B00AB4822 /* StarshipCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4919649E29DB3C4000AB4822 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4919647829DAD65800AB4822 /* Main.storyboard */,
+				4919647D29DAD65900AB4822 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4919649F29DB3C5700AB4822 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4919647229DAD65800AB4822 /* AppDelegate.swift */,
+				4919647429DAD65800AB4822 /* SceneDelegate.swift */,
+				4919647B29DAD65900AB4822 /* Assets.xcassets */,
+				4919648029DAD65900AB4822 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		57B208D733BCB4E068EC671D /* Pods */ = {
@@ -80,7 +165,6 @@
 				8B4C933411A49C09E2DF6384 /* Pods-Kompanion.debug.xcconfig */,
 				1F94F3A7849CB0230FEED28B /* Pods-Kompanion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +291,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4919647729DAD65800AB4822 /* ViewController.swift in Sources */,
+				4919647729DAD65800AB4822 /* MainScreenVC.swift in Sources */,
+				4919649C29DB2A2800AB4822 /* Starship.swift in Sources */,
+				4919649A29DB0CDB00AB4822 /* DetailScreenVC.swift in Sources */,
+				4919648F29DAF69C00AB4822 /* MainScreenViewModel.swift in Sources */,
 				4919647329DAD65800AB4822 /* AppDelegate.swift in Sources */,
+				4919649429DB063B00AB4822 /* StarshipCell.swift in Sources */,
+				4919648A29DADC5F00AB4822 /* NetworkManager.swift in Sources */,
+				4919648829DAD8F200AB4822 /* API.swift in Sources */,
 				4919647529DAD65800AB4822 /* SceneDelegate.swift in Sources */,
+				4919649829DB0B6200AB4822 /* DetailScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +450,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T8V4E75DU8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kompanion/Info.plist;
+				INFOPLIST_FILE = Kompanion/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -388,7 +479,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T8V4E75DU8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kompanion/Info.plist;
+				INFOPLIST_FILE = Kompanion/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
