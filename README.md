@@ -1,13 +1,14 @@
-# Kompanion
-https://swapi.dev (The Star Wars API) is selected as the API.
+#Kompanion
 
-MVVM is chosen as an architectural pattern.
+🚀 https://swapi.dev (The Star Wars API) is selected as the API.
 
-The Moya library was chosen to implement network requests.
+🚀 MVVM is chosen as an architectural pattern.
 
-To display data in offline mode, I use the cache.
+🚀 The Moya library was chosen to implement network requests.
 
-The main screen displays a list of existing ships, the second screen shows the details of the selected ship.
+🚀 To display data in offline mode, I use the cache.
+
+🚀 The main screen displays a list of existing ships, the second screen shows the details of the selected ship.
 
 ![Simulator Screen Shot - iPhone 14 Pro - 2023-04-04 at 00 21 48](https://user-images.githubusercontent.com/11324958/229594508-2b5dfe6e-bd91-49eb-a0dd-2754a6d30e07.png)
 
