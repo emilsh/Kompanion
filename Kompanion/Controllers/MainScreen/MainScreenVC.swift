@@ -18,7 +18,10 @@ final class MainScreenVC: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-
+        fetchStarships()
+    }
+    
+    private func fetchStarships() {
         viewModel.fetchStarships { [weak self] success in
             guard let self = self else { return }
             if success {
@@ -76,5 +79,4 @@ extension MainScreenVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
 }
