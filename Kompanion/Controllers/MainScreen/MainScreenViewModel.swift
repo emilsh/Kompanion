@@ -15,9 +15,6 @@ final class MainScreenViewModel {
     
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
-        
-        //Initialise starships from CoreData
-        
     }
     
     func fetchStarships(completion: @escaping (Bool) -> ()) {

@@ -14,7 +14,7 @@ protocol Networkable {
     func fetchStarships(completion: @escaping (Result<StarshipResponse, Error>) -> ())
 }
 
-class NetworkManager: Networkable {
+final class NetworkManager: Networkable {
     
     var provider = MoyaProvider<API>(plugins: [CachePolicyPlugin()])
     
@@ -38,22 +38,5 @@ private extension NetworkManager {
                 completion(.failure(error))
             }
         }
-    }
-}
-
-//MARK: - CachePolicyPlugin
-protocol CachePolicyGettable {
-    var cachePolicy: URLRequest.CachePolicy { get }
-}
-
-final class CachePolicyPlugin: PluginType {
-    public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
-        if let cachePolicyGettable = target as? CachePolicyGettable {
-            var mutableRequest = request
-            mutableRequest.cachePolicy = cachePolicyGettable.cachePolicy
-            return mutableRequest
-        }
-
-        return request
     }
 }

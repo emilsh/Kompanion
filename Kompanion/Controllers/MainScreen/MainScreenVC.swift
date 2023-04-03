@@ -19,7 +19,8 @@ final class MainScreenVC: UIViewController {
         
         setupUI()
 
-        viewModel.fetchStarships { success in
+        viewModel.fetchStarships { [weak self] success in
+            guard let self = self else { return }
             if success {
                 self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()
@@ -55,7 +56,6 @@ final class MainScreenVC: UIViewController {
             vc.starship = starship
         }
     }
-
 }
 
 extension MainScreenVC: UITableViewDataSource, UITableViewDelegate {
@@ -64,7 +64,7 @@ extension MainScreenVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoryCell", for: indexPath) as? StarshipCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "StarshipCell", for: indexPath) as? StarshipCell else {
             return UITableViewCell()
         }
         
