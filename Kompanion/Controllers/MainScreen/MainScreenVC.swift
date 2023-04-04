@@ -6,13 +6,30 @@
 //
 
 import UIKit
+import SnapKit
 
 final class MainScreenVC: UIViewController {
 
     let viewModel = MainScreenViewModel()
-    var activityIndicator: UIActivityIndicatorView!
+    weak var coordinator: MainCoordinator?
     
-    @IBOutlet weak var tableView: UITableView!
+    lazy var tableView: UITableView = {
+        let tblView = UITableView(frame: .zero)
+        tblView.register(StarshipCell.self, forCellReuseIdentifier: "StarshipCell")
+        tblView.dataSource = self
+        tblView.delegate = self
+        view.addSubview(tblView)
+        return tblView
+        
+    }()
+    
+    lazy var activityIndicator: UIActivityIndicatorView = {
+        let actInd = UIActivityIndicatorView(frame: .zero)
+        view.addSubview(actInd)
+        actInd.style = .medium
+        actInd.startAnimating()
+        return actInd
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,33 +49,20 @@ final class MainScreenVC: UIViewController {
     }
     
     private func setupUI() {
-        setupTableView()
-        setupActivityIndicator()
+        setupConstraints()
+        title = "The Star Wars Starships"
     }
     
-    private func setupActivityIndicator() {
-        activityIndicator = UIActivityIndicatorView(frame: CGRect(origin: .zero, size: CGSize(width: 50, height: 50)))
-        view.addSubview(activityIndicator)
-        activityIndicator.center = view.center
-        activityIndicator.style = .medium
-        activityIndicator.startAnimating()
-    }
-    
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
-    
-    //MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetailsSegue" {
-            guard let vc = segue.destination as? DetailScreenVC,
-                  let cell = sender as? UITableViewCell,
-                  let indexPath = tableView.indexPath(for: cell) else { return }
-            let starship = viewModel.starships[indexPath.row]
-            vc.starship = starship
+    private func setupConstraints() {
+        tableView.snp.makeConstraints { make in
+            make.top.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        activityIndicator.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
         }
     }
+    
 }
 
 extension MainScreenVC: UITableViewDataSource, UITableViewDelegate {
@@ -78,5 +82,7 @@ extension MainScreenVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let starship = viewModel.starships[indexPath.row]
+        coordinator?.openDetailScreenVC(with: starship)
     }
 }
