@@ -10,7 +10,6 @@
 		4919647329DAD65800AB4822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647229DAD65800AB4822 /* AppDelegate.swift */; };
 		4919647529DAD65800AB4822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647429DAD65800AB4822 /* SceneDelegate.swift */; };
 		4919647729DAD65800AB4822 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919647629DAD65800AB4822 /* MainScreenVC.swift */; };
-		4919647A29DAD65800AB4822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4919647829DAD65800AB4822 /* Main.storyboard */; };
 		4919647C29DAD65900AB4822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4919647B29DAD65900AB4822 /* Assets.xcassets */; };
 		4919647F29DAD65900AB4822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4919647D29DAD65900AB4822 /* LaunchScreen.storyboard */; };
 		4919648829DAD8F200AB4822 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919648729DAD8F200AB4822 /* API.swift */; };
@@ -19,6 +18,7 @@
 		4919649429DB063B00AB4822 /* StarshipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649329DB063B00AB4822 /* StarshipCell.swift */; };
 		4919649A29DB0CDB00AB4822 /* DetailScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649929DB0CDB00AB4822 /* DetailScreenVC.swift */; };
 		4919649C29DB2A2800AB4822 /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4919649B29DB2A2800AB4822 /* Starship.swift */; };
+		491964C529DC045800AB4822 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491964C429DC045800AB4822 /* Coordinator.swift */; };
 		D4BB9DF4C62219F02B1574CD /* Pods_Kompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDCA4A0E5434110AF80A1C7 /* Pods_Kompanion.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,6 @@
 		4919647229DAD65800AB4822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4919647429DAD65800AB4822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4919647629DAD65800AB4822 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
-		4919647929DAD65800AB4822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4919647B29DAD65900AB4822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4919647E29DAD65900AB4822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4919648029DAD65900AB4822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		4919649329DB063B00AB4822 /* StarshipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipCell.swift; sourceTree = "<group>"; };
 		4919649929DB0CDB00AB4822 /* DetailScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreenVC.swift; sourceTree = "<group>"; };
 		4919649B29DB2A2800AB4822 /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		491964C429DC045800AB4822 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8B4C933411A49C09E2DF6384 /* Pods-Kompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kompanion.debug.xcconfig"; path = "Target Support Files/Pods-Kompanion/Pods-Kompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		EFDCA4A0E5434110AF80A1C7 /* Pods_Kompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +90,7 @@
 			children = (
 				4919648729DAD8F200AB4822 /* API.swift */,
 				4919648929DADC5F00AB4822 /* NetworkManager.swift */,
+				491964C429DC045800AB4822 /* Coordinator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -139,7 +140,6 @@
 		4919649E29DB3C4000AB4822 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				4919647829DAD65800AB4822 /* Main.storyboard */,
 				4919647D29DAD65900AB4822 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -235,7 +235,6 @@
 			files = (
 				4919647F29DAD65900AB4822 /* LaunchScreen.storyboard in Resources */,
 				4919647C29DAD65900AB4822 /* Assets.xcassets in Resources */,
-				4919647A29DAD65800AB4822 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +289,7 @@
 			files = (
 				4919647729DAD65800AB4822 /* MainScreenVC.swift in Sources */,
 				4919649C29DB2A2800AB4822 /* Starship.swift in Sources */,
+				491964C529DC045800AB4822 /* Coordinator.swift in Sources */,
 				4919649A29DB0CDB00AB4822 /* DetailScreenVC.swift in Sources */,
 				4919648F29DAF69C00AB4822 /* MainScreenViewModel.swift in Sources */,
 				4919647329DAD65800AB4822 /* AppDelegate.swift in Sources */,
@@ -303,14 +303,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4919647829DAD65800AB4822 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4919647929DAD65800AB4822 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4919647D29DAD65900AB4822 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -449,7 +441,6 @@
 				INFOPLIST_FILE = Kompanion/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,7 +469,6 @@
 				INFOPLIST_FILE = Kompanion/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

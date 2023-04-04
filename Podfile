@@ -7,4 +7,5 @@ target 'Kompanion' do
 
   # Pods for Kompanion
   pod 'Moya', '~> 15.0'
+  pod 'SnapKit', '~> 5.6.0'
 end
